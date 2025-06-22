@@ -1,0 +1,90 @@
+2025-06-20 00:04:35,240 - INFO - Content of label_mapping.json: {
+    "0": "Down",
+    "1": "Close",
+    "2": "OK",
+    "3": "Open",
+    "4": "Two_finger_up",
+    "5": "Up"
+}
+2025-06-20 00:04:35,240 - INFO - Gestures: ['Down', 'Close', 'OK', 'Open', 'Two_finger_up', 'Up']
+2025-06-20 00:04:35,242 - INFO - Content of all_gestures_labels.npy (unique labels): [0 1 2 3 4 5]
+2025-06-20 00:04:35,242 - INFO - Total number of labels: 53946
+2025-06-20 00:04:35,264 - INFO - Loaded data. Shape: (53946, 63), Min: -0.23040761053562164, Max: 1.0273429155349731
+2025-06-20 00:04:35,283 - INFO - Saved scaler to D:\DATN\MediaPipe_VideoData\hand_gesture_dataset\output_data\models\models_scaler\scaler_new.npy
+2025-06-20 00:04:35,363 - INFO - Data augmented. New shape: (107892, 63)
+2025-06-20 00:04:35,390 - INFO - Prepared sequences. Shape: (21578, 5, 63), Labels shape: (21578,)
+2025-06-20 00:04:35,408 - INFO - Data split. Train: (17262, 5, 63), Test: (4316, 5, 63)
+2025-06-20 00:04:35,409 - INFO - Number of training samples: 17262
+2025-06-20 00:04:35,409 - INFO - Number of test samples: 4316
+2025-06-20 00:04:35,409 - INFO - Class Down - Train samples: 2877, Test samples: 719
+2025-06-20 00:04:35,409 - INFO - Class Close - Train samples: 2875, Test samples: 719
+2025-06-20 00:04:35,409 - INFO - Class OK - Train samples: 2876, Test samples: 719
+2025-06-20 00:04:35,409 - INFO - Class Open - Train samples: 2882, Test samples: 721
+2025-06-20 00:04:35,409 - INFO - Class Two_finger_up - Train samples: 2875, Test samples: 719
+2025-06-20 00:04:35,409 - INFO - Class Up - Train samples: 2877, Test samples: 719
+2025-06-20 00:04:35,447 - INFO - Input Information:
+2025-06-20 00:04:35,448 - INFO - --------------------------------------------------------------------------------
+2025-06-20 00:04:35,448 - INFO - Parameter                 Details                                                
+2025-06-20 00:04:35,448 - INFO - --------------------------------------------------------------------------------
+2025-06-20 00:04:35,448 - INFO - Input Description         Hand gesture features extracted from video data
+2025-06-20 00:04:35,448 - INFO - Total Input Count         107892 samples
+2025-06-20 00:04:35,448 - INFO - Input Format              NumPy array of shape (107892, 63)
+2025-06-20 00:04:35,448 - INFO - --------------------------------------------------------------------------------
+2025-06-20 00:04:35,448 - INFO - Table 1: Gesture Frame Counts
+2025-06-20 00:04:35,448 - INFO - --------------------------------------------------------------------------------
+2025-06-20 00:04:35,448 - INFO - Parameter                 Details                                                
+2025-06-20 00:04:35,448 - INFO - --------------------------------------------------------------------------------
+2025-06-20 00:04:35,448 - INFO - Total Gesture Frames      107890 frames
+2025-06-20 00:04:35,448 - INFO - Train Gesture Frames      86310 frames
+2025-06-20 00:04:35,448 - INFO - Test Gesture Frames       21580 frames
+2025-06-20 00:04:35,449 - INFO - --------------------------------------------------------------------------------
+2025-06-20 00:04:35,449 - INFO - LSTM Layer Information:
+2025-06-20 00:04:35,449 - INFO - --------------------------------------------------------------------------------
+2025-06-20 00:04:35,449 - INFO - Layer                     Input Size                Output Size              
+2025-06-20 00:04:35,449 - INFO - --------------------------------------------------------------------------------
+2025-06-20 00:04:35,449 - INFO - LSTM Layer 1              (5, 63)                   64                       
+2025-06-20 00:04:35,449 - INFO - LSTM Layer 2              (64)                      32                       
+2025-06-20 00:04:35,449 - INFO - LSTM Layer 3              (32)                      16                       
+2025-06-20 00:04:35,449 - INFO - Dense Layer 1             16                        32                       
+2025-06-20 00:04:35,449 - INFO - Output Layer              32                        6                        
+2025-06-20 00:04:35,450 - INFO - --------------------------------------------------------------------------------
+2025-06-20 00:11:10,442 - INFO - Test accuracy: 99.95%
+2025-06-20 00:11:10,464 - INFO - Saved model to D:\DATN\MediaPipe_VideoData\hand_gesture_dataset\output_data\models\models_h5\hand_gesture_model_new.h5
+2025-06-20 00:11:10,464 - INFO - Converting model to TFLite with quantization...
+2025-06-20 00:11:14,642 - INFO - Assets written to: C:\Users\thang\AppData\Local\Temp\tmpgb6zz5ed\assets
+2025-06-20 00:11:17,959 - INFO - Saved TFLite model to D:\DATN\MediaPipe_VideoData\hand_gesture_dataset\output_data\models\models_tflite\hand_gesture_model_new.tflite
+2025-06-20 00:11:18,887 - INFO - Saved Training and Validation Loss plot to D:\DATN\MediaPipe_VideoData\hand_gesture_dataset\output_data\image_results\loss_plot.png
+2025-06-20 00:11:18,971 - INFO - Saved Training and Validation Accuracy plot to D:\DATN\MediaPipe_VideoData\hand_gesture_dataset\output_data\image_results\accuracy_plot.png
+2025-06-20 00:11:19,063 - INFO - Saved Confusion Matrix to D:\DATN\MediaPipe_VideoData\hand_gesture_dataset\output_data\image_results\confusion_matrix.png
+2025-06-20 00:11:19,063 - INFO - Confusion Matrix Description:
+2025-06-20 00:11:19,063 - INFO - The confusion matrix shows the relationship between true labels (rows) and predicted labels (columns).
+2025-06-20 00:11:19,063 - INFO - Each cell [i,j] represents the number of samples with true label i predicted as label j.
+2025-06-20 00:11:19,063 - INFO - Diagonal elements [i,i] represent correct predictions (True Positives) for each class.
+2025-06-20 00:11:19,063 - INFO - Off-diagonal elements represent misclassifications.
+2025-06-20 00:11:19,063 - INFO - Detailed breakdown:
+2025-06-20 00:11:19,063 - INFO - Class Down:
+2025-06-20 00:11:19,063 - INFO -   True Positives (correct predictions): 719
+2025-06-20 00:11:19,063 - INFO -   False Negatives (missed predictions): 0
+2025-06-20 00:11:19,063 - INFO -   False Positives (incorrectly predicted as Down): 0
+2025-06-20 00:11:19,063 - INFO - Class Close:
+2025-06-20 00:11:19,063 - INFO -   True Positives (correct predictions): 719
+2025-06-20 00:11:19,063 - INFO -   False Negatives (missed predictions): 0
+2025-06-20 00:11:19,063 - INFO -   False Positives (incorrectly predicted as Close): 0
+2025-06-20 00:11:19,063 - INFO - Class OK:
+2025-06-20 00:11:19,063 - INFO -   True Positives (correct predictions): 719
+2025-06-20 00:11:19,063 - INFO -   False Negatives (missed predictions): 0
+2025-06-20 00:11:19,063 - INFO -   False Positives (incorrectly predicted as OK): 1
+2025-06-20 00:11:19,063 - INFO - Class Open:
+2025-06-20 00:11:19,063 - INFO -   True Positives (correct predictions): 720
+2025-06-20 00:11:19,063 - INFO -   False Negatives (missed predictions): 1
+2025-06-20 00:11:19,063 - INFO -   False Positives (incorrectly predicted as Open): 0
+2025-06-20 00:11:19,063 - INFO - Class Two_finger_up:
+2025-06-20 00:11:19,063 - INFO -   True Positives (correct predictions): 718
+2025-06-20 00:11:19,063 - INFO -   False Negatives (missed predictions): 1
+2025-06-20 00:11:19,063 - INFO -   False Positives (incorrectly predicted as Two_finger_up): 0
+2025-06-20 00:11:19,063 - INFO - Class Up:
+2025-06-20 00:11:19,064 - INFO -   True Positives (correct predictions): 719
+2025-06-20 00:11:19,064 - INFO -   False Negatives (missed predictions): 0
+2025-06-20 00:11:19,064 - INFO -   False Positives (incorrectly predicted as Up): 1
+2025-06-20 00:11:19,064 - INFO - Classification Report:
+2025-06-20 00:11:19,155 - INFO - Saved Precision, Recall, F1-Score plot to D:\DATN\MediaPipe_VideoData\hand_gesture_dataset\output_data\image_results\metrics_plot.png
